@@ -1,0 +1,23 @@
+def name;
+node
+{
+    stage('Checkout')
+    {
+        def address = "US"
+        name = "Abhi"
+        def welcome = message(name)
+        echo "hello ${name} from ${address}"
+        returnmessage()
+        echo "${welcome}"
+    }
+}
+def returnmessage()
+{
+   def name = "John" 
+   echo "name variable value inside function is ${name}"
+}
+def message(String name)
+{
+    def name1 = "Hello ${name}.Welcome home"
+    return name1
+}
